@@ -83,11 +83,16 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch spam {
@@ -166,13 +171,33 @@ footer {
   font-size: 14px;
 }
 
-/* média queries */ 
-@media (min-width: 700px){
+/* média queries */
+/*erro no projeto
+@media (min-width: 700px) {
   :root {
     --bg-url: url(./assents/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(./assents/bg-desktop-ligth.jpg);
+    --bg-url: url(./assents/bg-desktop-light.jpg);
+  }
+}*/
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
