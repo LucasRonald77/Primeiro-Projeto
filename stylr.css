@@ -35,6 +35,7 @@ body {
   /*background: color imagem no-repeat position/size*/
 
   background: var(--bg-url) no-repeat top center/cover; /*atalho*/
+  height: 100vh;
 }
 
 body * {
@@ -163,4 +164,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* média queries */ 
+@media (min-width: 700px){
+  :root {
+    --bg-url: url(./assents/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assents/bg-desktop-ligth.jpg);
+  }
 }
